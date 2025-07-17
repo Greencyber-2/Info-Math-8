@@ -15,10 +15,31 @@ body {
     color: var(--text-color);
 }
 
+/* اصلاح پس‌زمینه بخش‌ها */
+.hero,
+.features,
+.demo,
+.about {
+    background-color: var(--bg-color) !important;
+}
+
+.products,
+.download {
+    background-color: #1a1a1a !important;
+}
+
+/* اصلاح پس‌زمینه الگوها */
 body::before {
+    opacity: 0.03;
+    background-image: url('../images/math-pattern-dark.svg') !important;
+}
+
+.features::before {
+    background-image: url('../images/math-bg-dark.svg') !important;
     opacity: 0.03;
 }
 
+/* بقیه استایل‌های دارک مود */
 .header {
     background-color: rgba(30, 30, 30, 0.95) !important;
     backdrop-filter: blur(10px);
@@ -167,4 +188,8 @@ body::before {
 
 .member-avatar {
     background-color: var(--primary-color) !important;
+}
+
+.avatar-overlay {
+    background-color: rgba(79, 70, 229, 0.7) !important;
 }

@@ -3,18 +3,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hero Section Animations
     const heroElements = document.querySelectorAll('.hero-title span, .hero-description, .hero-buttons');
     
-    const heroObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.classList.add('animate');
-                }, index * 200);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    heroElements.forEach(el => {
-        heroObserver.observe(el);
+    heroElements.forEach((el, index) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'all 0.5s ease ' + (index * 0.2) + 's';
+        
+        setTimeout(() => {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        }, 100);
     });
     
     // Features Animation
