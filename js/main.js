@@ -13,15 +13,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Mobile Menu
-    const hamburger = document.querySelector('.hamburger-menu');
+    const hamburger = document.querySelector('.hamburger');
     const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.nav-link');
     
     hamburger.addEventListener('click', function() {
         this.classList.toggle('active');
         navbar.classList.toggle('active');
     });
     
-    const navLinks = document.querySelectorAll('.navbar a');
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             if (navbar.classList.contains('active')) {

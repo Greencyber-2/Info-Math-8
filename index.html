@@ -5,21 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سوفیا+ | اکوسیستم هوشمند آموزش ریاضی</title>
     <meta name="description" content="سوفیا+ - راهکار هوشمند آموزش ریاضی برای دانش‌آموزان متوسطه اول با قابلیت‌های منحصر به فرد">
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts.css">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/dark-mode.css" id="darkModeStyle" disabled>
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Libraries -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
     <!-- Preloader -->
     <div class="preloader">
-        <div class="sophia-logo">
-            <div class="s-logo">S+</div>
-            <div class="s-name">سوفیا</div>
-        </div>
-        <div class="loader-bar">
-            <div class="progress"></div>
+        <div class="preloader-content">
+            <div class="logo-loader">
+                <span class="s-logo">S+</span>
+                <span class="s-name">سوفیا</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="loading-text">در حال بارگذاری...</div>
         </div>
     </div>
 
@@ -27,20 +37,20 @@
     <header class="header">
         <div class="container">
             <a href="#" class="logo">
-                <div class="sophia-logo">
-                    <div class="s-logo">S+</div>
-                    <div class="s-name">سوفیا</div>
+                <div class="logo-wrapper">
+                    <span class="s-logo">S+</span>
+                    <span class="s-name">سوفیا</span>
                 </div>
             </a>
             
             <nav class="navbar">
-                <ul>
-                    <li><a href="#home" class="active">خانه</a></li>
-                    <li><a href="#features">ویژگی‌ها</a></li>
-                    <li><a href="#products">محصولات</a></li>
-                    <li><a href="#about">درباره ما</a></li>
-                    <li><a href="#demo">معرفی اثر</a></li>
-                    <li><a href="#download">دانلود</a></li>
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">خانه</a></li>
+                    <li><a href="#features" class="nav-link">ویژگی‌ها</a></li>
+                    <li><a href="#products" class="nav-link">محصولات</a></li>
+                    <li><a href="#demo" class="nav-link">معرفی اثر</a></li>
+                    <li><a href="#about" class="nav-link">درباره ما</a></li>
+                    <li><a href="#download" class="nav-link">دانلود</a></li>
                 </ul>
             </nav>
             
@@ -49,10 +59,10 @@
                     <i class="fas fa-moon"></i>
                     <i class="fas fa-sun"></i>
                 </button>
-                <button class="hamburger-menu" aria-label="منو">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button class="hamburger" aria-label="منو">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
                 </button>
             </div>
         </div>
@@ -61,37 +71,41 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-bg">
-            <div class="math-shape shape-1"></div>
-            <div class="math-shape shape-2"></div>
-            <div class="math-shape shape-3"></div>
+            <div class="particles" id="particles-js"></div>
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
         </div>
+        
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content" data-aos="fade-up">
                 <h1 class="hero-title">
-                    <span class="title-part">یادگیری ریاضی با</span>
-                    <span class="title-part highlight">سوفیا+</span>
+                    <span class="title-line">یادگیری ریاضی با</span>
+                    <span class="title-line highlight">سوفیا+</span>
                 </h1>
                 <p class="hero-description">اکوسیستم هوشمند آموزش ریاضی برای دانش‌آموزان متوسطه اول با استفاده از فناوری‌های روز دنیا</p>
-                <div class="hero-buttons">
-                    <a href="#download" class="btn primary-btn">
+                
+                <div class="hero-cta">
+                    <a href="#download" class="btn btn-primary pulse">
                         <i class="fas fa-download"></i> دریافت اپلیکیشن
                     </a>
-                    <a href="#demo" class="btn secondary-btn">
+                    <a href="#demo" class="btn btn-secondary">
                         <i class="fas fa-play"></i> معرفی اثر
                     </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="app-window">
+            
+            <div class="hero-image" data-aos="fade-left">
+                <div class="app-mockup floating">
                     <div class="app-header">
                         <div class="app-controls">
-                            <span class="control red"></span>
-                            <span class="control yellow"></span>
-                            <span class="control green"></span>
+                            <span class="control control-red"></span>
+                            <span class="control control-yellow"></span>
+                            <span class="control control-green"></span>
                         </div>
                         <div class="app-title">سوفیا+</div>
                     </div>
-                    <div class="app-content">
+                    <div class="app-screen">
                         <div class="math-animation">
                             <div class="equation">2x + 5 = 15</div>
                             <div class="solution">x = 5</div>
@@ -111,52 +125,64 @@
             </div>
             
             <div class="features-grid">
-                <div class="feature-card">
+                <!-- Feature 1 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-icon">
                         <i class="fas fa-brain"></i>
                     </div>
                     <h3 class="feature-title">هوش مصنوعی آموزشی</h3>
                     <p class="feature-description">سیستم هوشمند تشخیص سطح و پیشنهاد محتوای شخصی‌سازی شده بر اساس نیاز هر دانش‌آموز</p>
+                    <div class="feature-wave"></div>
                 </div>
                 
-                <div class="feature-card">
+                <!-- Feature 2 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-icon">
                         <i class="fas fa-chalkboard-teacher"></i>
                     </div>
                     <h3 class="feature-title">آموزش تعاملی</h3>
                     <p class="feature-description">آموزش مفاهیم ریاضی با انیمیشن‌های جذاب و مثال‌های کاربردی</p>
+                    <div class="feature-wave"></div>
                 </div>
                 
-                <div class="feature-card">
+                <!-- Feature 3 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-icon">
                         <i class="fas fa-robot"></i>
                     </div>
                     <h3 class="feature-title">چت‌بات هوشمند</h3>
                     <p class="feature-description">پاسخگویی به سوالات ریاضی دانش‌آموزان در هر زمان و مکان</p>
+                    <div class="feature-wave"></div>
                 </div>
                 
-                <div class="feature-card">
+                <!-- Feature 4 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="feature-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3 class="feature-title">تحلیل پیشرفت</h3>
                     <p class="feature-description">نمایش گراف‌های پیشرفت تحصیلی و شناسایی نقاط ضعف</p>
+                    <div class="feature-wave"></div>
                 </div>
                 
-                <div class="feature-card">
+                <!-- Feature 5 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
                     <div class="feature-icon">
                         <i class="fas fa-gamepad"></i>
                     </div>
                     <h3 class="feature-title">یادگیری بازی‌محور</h3>
                     <p class="feature-description">تمرین مفاهیم ریاضی در قالب بازی‌های جذاب و چالش‌برانگیز</p>
+                    <div class="feature-wave"></div>
                 </div>
                 
-                <div class="feature-card">
+                <!-- Feature 6 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
                     <div class="feature-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <h3 class="feature-title">دسترسی چندپلتفرمی</h3>
                     <p class="feature-description">استفاده از سوفیا+ در ویندوز، وب و پیام‌رسان‌ها</p>
+                    <div class="feature-wave"></div>
                 </div>
             </div>
         </div>
@@ -184,20 +210,21 @@
                 </div>
                 
                 <div class="tabs-content">
+                    <!-- Windows App Tab -->
                     <div class="tab-pane active" id="windows-app">
-                        <div class="tab-content">
-                            <div class="tab-image">
-                                <div class="app-window large">
+                        <div class="tab-content-wrapper">
+                            <div class="tab-image" data-aos="fade-right">
+                                <div class="app-mockup large floating">
                                     <div class="app-header">
                                         <div class="app-controls">
-                                            <span class="control red"></span>
-                                            <span class="control yellow"></span>
-                                            <span class="control green"></span>
+                                            <span class="control control-red"></span>
+                                            <span class="control control-yellow"></span>
+                                            <span class="control control-green"></span>
                                         </div>
                                         <div class="app-title">سوفیا+ برای ویندوز</div>
                                     </div>
-                                    <div class="app-content">
-                                        <div class="app-features">
+                                    <div class="app-screen">
+                                        <div class="app-features-grid">
                                             <div class="app-feature">
                                                 <i class="fas fa-book-open"></i>
                                                 <span>درس‌نامه‌های تعاملی</span>
@@ -218,35 +245,39 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-text">
+                            
+                            <div class="tab-text" data-aos="fade-left">
                                 <h3>برنامه اختصاصی ویندوز</h3>
                                 <p>نسخه کامل سوفیا+ با تمامی امکانات برای سیستم عامل ویندوز. این برنامه شامل درس‌نامه‌های تعاملی، بانک سوالات طبقه‌بندی شده، آزمون‌ساز هوشمند و سیستم تحلیل پیشرفت می‌باشد.</p>
+                                
                                 <ul class="features-list">
                                     <li><i class="fas fa-check-circle"></i> رابط کاربری مدرن و کاربرپسند</li>
                                     <li><i class="fas fa-check-circle"></i> آموزش‌های تعاملی با انیمیشن</li>
                                     <li><i class="fas fa-check-circle"></i> حل مسائل با توضیح مرحله به مرحله</li>
                                     <li><i class="fas fa-check-circle"></i> پشتیبانی از قلم نوری برای حل مسائل</li>
                                 </ul>
-                                <a href="#download" class="btn primary-btn">
+                                
+                                <a href="#download" class="btn btn-primary">
                                     <i class="fas fa-download"></i> دانلود برای ویندوز
                                 </a>
                             </div>
                         </div>
                     </div>
                     
+                    <!-- Web App Tab -->
                     <div class="tab-pane" id="web-app">
-                        <div class="tab-content">
-                            <div class="tab-image">
-                                <div class="browser-window">
+                        <div class="tab-content-wrapper">
+                            <div class="tab-image" data-aos="fade-right">
+                                <div class="browser-mockup floating">
                                     <div class="browser-header">
                                         <div class="browser-controls">
-                                            <span class="control red"></span>
-                                            <span class="control yellow"></span>
-                                            <span class="control green"></span>
+                                            <span class="control control-red"></span>
+                                            <span class="control control-yellow"></span>
+                                            <span class="control control-green"></span>
                                         </div>
                                         <div class="browser-url">https://web.sophiaplus.ir</div>
                                     </div>
-                                    <div class="browser-content">
+                                    <div class="browser-screen">
                                         <div class="chat-container">
                                             <div class="chat-header">
                                                 <div class="chat-title">چت‌بات سوفیا+</div>
@@ -274,31 +305,35 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-text">
+                            
+                            <div class="tab-text" data-aos="fade-left">
                                 <h3>وب اپلیکیشن هوشمند</h3>
                                 <p>دسترسی به چت‌بات هوشمند سوفیا+ از طریق مرورگرهای وب. این نسخه برای استفاده در سیستم‌عامل‌های مختلف و بدون نیاز به نصب طراحی شده است.</p>
+                                
                                 <ul class="features-list">
                                     <li><i class="fas fa-check-circle"></i> پاسخگویی به سوالات ریاضی</li>
                                     <li><i class="fas fa-check-circle"></i> حل مسائل با نمایش راه حل کامل</li>
                                     <li><i class="fas fa-check-circle"></i> آموزش مفاهیم پایه تا پیشرفته</li>
                                     <li><i class="fas fa-check-circle"></i> سازگار با تمام دستگاه‌ها</li>
                                 </ul>
-                                <a href="https://web.sophiaplus.ir" class="btn primary-btn" target="_blank">
+                                
+                                <a href="https://web.sophiaplus.ir" class="btn btn-primary" target="_blank">
                                     <i class="fas fa-external-link-alt"></i> ورود به وب‌اپ
                                 </a>
                             </div>
                         </div>
                     </div>
                     
+                    <!-- Messenger Bot Tab -->
                     <div class="tab-pane" id="messenger-bot">
-                        <div class="tab-content">
-                            <div class="tab-image">
-                                <div class="messenger-container">
+                        <div class="tab-content-wrapper">
+                            <div class="tab-image" data-aos="fade-right">
+                                <div class="messenger-mockup floating">
                                     <div class="messenger-tabs">
                                         <button class="active"><i class="fab fa-telegram"></i> تلگرام</button>
                                         <button><i class="fas fa-comment-dots"></i> بله</button>
                                     </div>
-                                    <div class="messenger-content">
+                                    <div class="messenger-screen">
                                         <div class="messenger-header">
                                             <div class="messenger-title">ربات سوفیا+</div>
                                         </div>
@@ -328,20 +363,23 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-text">
+                            
+                            <div class="tab-text" data-aos="fade-left">
                                 <h3>ربات پیام‌رسان</h3>
                                 <p>دسترسی به امکانات سوفیا+ از طریق پیام‌رسان‌های محبوب. ربات سوفیا+ در تلگرام و بله در دسترس است و بسیاری از امکانات اصلی را ارائه می‌دهد.</p>
+                                
                                 <ul class="features-list">
                                     <li><i class="fas fa-check-circle"></i> حل مسائل ریاضی با ارسال سوال</li>
                                     <li><i class="fas fa-check-circle"></i> دریافت نمونه سوالات طبقه‌بندی شده</li>
                                     <li><i class="fas fa-check-circle"></i> آزمون‌های هوشمند با زمان‌بندی</li>
                                     <li><i class="fas fa-check-circle"></i> گزارش‌گیری از پیشرفت تحصیلی</li>
                                 </ul>
+                                
                                 <div class="bot-buttons">
-                                    <a href="https://t.me/sophiaplus_bot" class="btn primary-btn" target="_blank">
+                                    <a href="https://t.me/sophiaplus_bot" class="btn btn-primary" target="_blank">
                                         <i class="fab fa-telegram"></i> ربات تلگرام
                                     </a>
-                                    <a href="https://ble.ir/sophiaplus_bot" class="btn secondary-btn" target="_blank">
+                                    <a href="https://ble.ir/sophiaplus_bot" class="btn btn-secondary" target="_blank">
                                         <i class="fas fa-comment-dots"></i> ربات بله
                                     </a>
                                 </div>
@@ -355,32 +393,43 @@
 
     <!-- Demo Section -->
     <section class="demo" id="demo">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">معرفی <span class="highlight">اثر</span></h2>
-                <p class="section-subtitle">ویدیوی معرفی پروژه سوفیا+ برای جشنواره خوارزمی</p>
-            </div>
-            
-            <div class="demo-content">
-                <div class="video-container">
-                    <iframe src="https://youtu.be/jEMl1i8S7jE?si=7o4HhgFck6ewdpQY" allowfullscreen></iframe>
-                </div>
-                <div class="demo-text">
-                    <h3>پروژه سوفیا+ در جشنواره خوارزمی</h3>
-                    <p>سوفیا+ یک اکوسیستم آموزشی هوشمند برای یادگیری ریاضی است که به دانش‌آموزان پایه‌های هفتم، هشتم و نهم کمک می‌کند مفاهیم ریاضی را به ساده‌ترین و جذاب‌ترین شکل ممکن یاد بگیرند.</p>
-                    <p>این پروژه برای جشنواره نوجوانان خوارزمی (محور ریاضی - زیرمحور فناوری اطلاعات) در سال 1404 طراحی شده و همواره در حال توسعه و بهبود است.</p>
-                    <div class="demo-links">
-                        <a href="https://youtu.be/jEMl1i8S7jE?si=7o4HhgFck6ewdpQY" class="btn primary-btn" target="_blank">
-                            <i class="fas fa-folder-open"></i> مستندات کامل پروژه
-                        </a>
-                        <a href="https://youtu.be/jEMl1i8S7jE?si=7o4HhgFck6ewdpQY" class="btn secondary-btn" target="_blank">
-                            <i class="fab fa-youtube"></i> تماشا در یوتیوب
-                        </a>
-                    </div>
-                </div>
+    <div class="container">
+        <div class="section-header">
+        <h2 class="section-title">معرفی <span class="highlight">اثر</span></h2>
+        <p class="section-subtitle">ویدیوی معرفی پروژه سوفیا+ برای جشنواره خوارزمی</p>
+        </div>
+
+        <div class="demo-content">
+        <div class="video-container" data-aos="fade-right">
+            <div class="video-wrapper">
+            <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/Jbhv63rZmnI"
+                    title="معرفی پروژه سوفیا+"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+            </iframe>
             </div>
         </div>
+
+        <div class="demo-text" data-aos="fade-left">
+            <h3>پروژه سوفیا+ در جشنواره خوارزمی</h3>
+            <p>سوفیا+ یک اکوسیستم آموزشی هوشمند برای یادگیری ریاضی است که به دانش‌آموزان پایه‌های هفتم، هشتم و نهم کمک می‌کند مفاهیم ریاضی را به ساده‌ترین و جذاب‌ترین شکل ممکن یاد بگیرند.</p>
+            <p>این پروژه برای جشنواره نوجوانان خوارزمی (محور ریاضی - زیرمحور فناوری اطلاعات) در سال 1404 طراحی شده و همواره در حال توسعه و بهبود است.</p>
+
+            <div class="demo-links">
+            <a href="#" class="btn btn-primary">
+                <i class="fas fa-folder-open"></i> مستندات کامل پروژه
+            </a>
+            <a href="https://www.youtube.com/watch?v=Jbhv63rZmnI" class="btn btn-secondary" target="_blank">
+                <i class="fab fa-youtube"></i> تماشا در یوتیوب
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
     </section>
+
 
     <!-- Download Section -->
     <section class="download" id="download">
@@ -390,51 +439,60 @@
                 <p class="section-subtitle">دریافت آخرین نسخه از محصولات ما</p>
             </div>
             
-            <div class="download-cards">
-                <div class="download-card">
+            <div class="download-grid">
+                <!-- Windows Download Card -->
+                <div class="download-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="download-icon">
                         <i class="fab fa-windows"></i>
                     </div>
                     <h3 class="download-title">ویندوز</h3>
                     <p class="download-description">نسخه کامل با تمامی امکانات</p>
+                    
                     <div class="download-info">
                         <span><i class="fas fa-download"></i> حجم: 65 مگابایت</span>
                         <span><i class="fas fa-code-branch"></i> نسخه: 1.2.0</span>
                     </div>
-                    <div class="download-options">
-                        <a href="downloads/sophiaplus-windows-x64-v1.2.0.exe" class="btn primary-btn" download>
+                    
+                    <div class="download-buttons">
+                        <a href="downloads/sophiaplus-windows-x64-v1.2.0.exe" class="btn btn-primary" download>
                             <i class="fas fa-download"></i> نسخه 64 بیتی
                         </a>
-                        <a href="downloads/sophiaplus-windows-x86-v1.2.0.exe" class="btn secondary-btn" download>
+                        <a href="downloads/sophiaplus-windows-x86-v1.2.0.exe" class="btn btn-secondary" download>
                             <i class="fas fa-download"></i> نسخه 32 بیتی
                         </a>
                     </div>
                 </div>
                 
-                <div class="download-card">
+                <!-- Android Download Card -->
+                <div class="download-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="download-icon">
                         <i class="fab fa-android"></i>
                     </div>
                     <h3 class="download-title">اندروید</h3>
                     <p class="download-description">به زودی در دسترس خواهد بود</p>
+                    
                     <div class="download-info">
                         <span><i class="fas fa-clock"></i> در حال توسعه</span>
                     </div>
-                    <button class="btn primary-btn disabled">
+                    
+                    <button class="btn btn-primary disabled">
                         <i class="fas fa-hourglass-half"></i> به زودی
                     </button>
                 </div>
                 
-                <div class="download-card">
+                <!-- iOS Download Card -->
+                <div class="download-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="download-icon">
                         <i class="fab fa-apple"></i>
                     </div>
                     <h3 class="download-title">iOS</h3>
                     <p class="download-description">به زودی در دسترس خواهد بود</p>
+                    
                     <div class="download-info">
                         <span><i class="fas fa-clock"></i> در حال توسعه</span>
                     </div>
-                    <button class="btn primary-btn disabled">
+                    
+                    <button class="btn btn-primary disabled">
                         <i class="fas fa-hourglass-half"></i> به زودی
                     </button>
                 </div>
@@ -442,8 +500,9 @@
             
             <div class="other-platforms">
                 <h3>دسترسی آنلاین</h3>
-                <div class="platform-grid">
-                    <a href="https://web.sophiaplus.ir" class="platform-card" target="_blank">
+                
+                <div class="platforms-grid">
+                    <a href="https://web.sophiaplus.ir" class="platform-card" data-aos="fade-up" data-aos-delay="100" target="_blank">
                         <div class="platform-icon">
                             <i class="fas fa-globe"></i>
                         </div>
@@ -453,7 +512,7 @@
                         </div>
                     </a>
                     
-                    <a href="https://t.me/sophiaplus_bot" class="platform-card" target="_blank">
+                    <a href="https://t.me/sophiaplus_bot" class="platform-card" data-aos="fade-up" data-aos-delay="200" target="_blank">
                         <div class="platform-icon">
                             <i class="fab fa-telegram"></i>
                         </div>
@@ -463,7 +522,7 @@
                         </div>
                     </a>
                     
-                    <a href="https://ble.ir/sophiaplus_bot" class="platform-card" target="_blank">
+                    <a href="https://ble.ir/sophiaplus_bot" class="platform-card" data-aos="fade-up" data-aos-delay="300" target="_blank">
                         <div class="platform-icon">
                             <i class="fas fa-comment-dots"></i>
                         </div>
@@ -485,17 +544,21 @@
                 <p class="section-subtitle">تیم توسعه‌دهنده سوفیا+</p>
             </div>
             
-            <div class="team">
-                <div class="team-member">
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="member-image">
-                        <div class="member-avatar" style="background-image: url('images/developer.jpg'); background-size: cover; background-position: center; pointer-events: none; user-select: none; -webkit-user-drag: none;">
-                            <div class="avatar-overlay"></div>
+                        <img src="images/amirhossein.jpg" alt="امیرحسین گودرزی" class="member-avatar">
+                        <div class="avatar-overlay">
+                            <i class="fas fa-user"></i>
                         </div>
                     </div>
+                    
                     <div class="member-info">
                         <h3>امیرحسین گودرزی</h3>
-                        <p class="role">طراح و توسعه‌دهنده</p>
-                        <p class="bio">دانش‌آموز پایه نهم و علاقه‌مند به برنامه‌نویسی و ریاضیات. توسعه‌دهنده اصلی پروژه سوفیا+ و مسئول پیاده‌سازی فنی سیستم.</p>
+                        <p class="member-role">طراح و توسعه‌دهنده</p>
+                        <p class="member-bio">دانش‌آموز پایه نهم و علاقه‌مند به برنامه‌نویسی و ریاضیات. توسعه‌دهنده اصلی پروژه سوفیا+ و مسئول پیاده‌سازی فنی سیستم.</p>
+                        
                         <div class="social-links">
                             <a href="#" aria-label="تلگرام"><i class="fab fa-telegram"></i></a>
                             <a href="#" aria-label="اینستاگرام"><i class="fab fa-instagram"></i></a>
@@ -504,16 +567,20 @@
                     </div>
                 </div>
                 
-                <div class="team-member">
+                <!-- Team Member 2 -->
+                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="member-image">
-                        <div class="member-avatar" style="background-image: url('images/teacher.jpg'); background-size: cover; background-position: center; pointer-events: none; user-select: none; -webkit-user-drag: none;">
-                            <div class="avatar-overlay"></div>
+                        <img src="images/teacher.jpg" alt="استاد محمد فهیم امرایی" class="member-avatar">
+                        <div class="avatar-overlay">
+                            <i class="fas fa-user"></i>
                         </div>
                     </div>
+                    
                     <div class="member-info">
                         <h3>استاد محمد فهیم امرایی</h3>
-                        <p class="role">دبیر راهنما</p>
-                        <p class="bio">مدرس ریاضی و راهنمای پروژه‌های دانش‌آموزی. مشاور علمی پروژه سوفیا+ و مسئول محتوای آموزشی سیستم.</p>
+                        <p class="member-role">دبیر راهنما</p>
+                        <p class="member-bio">مدرس ریاضی و راهنمای پروژه‌های دانش‌آموزی. مشاور علمی پروژه سوفیا+ و مسئول محتوای آموزشی سیستم.</p>
+                        
                         <div class="social-links">
                             <a href="#" aria-label="تلگرام"><i class="fab fa-telegram"></i></a>
                             <a href="#" aria-label="اینستاگرام"><i class="fab fa-instagram"></i></a>
@@ -522,7 +589,7 @@
                 </div>
             </div>
             
-            <div class="about-text">
+            <div class="about-text" data-aos="fade-up">
                 <h3>داستان سوفیا+</h3>
                 <p>سوفیا+ با هدف حل مشکل یادگیری ریاضی برای دانش‌آموزان متوسطه اول طراحی شده است. این پروژه از سال 1403 آغاز شد و پس از تحقیقات گسترده درباره مشکلات یادگیری ریاضی، اولین نسخه آن در سال 1404 برای جشنواره خوارزمی ارائه گردید.</p>
                 <p>نام سوفیا از نام "سوفیا کوالفسکی"، اولین زن ریاضیدان بزرگ گرفته شده است که نماد یادگیری و پشتکار در ریاضیات است. علامت + در نام سوفیا+ نشان‌دهنده ارزش افزوده این سیستم نسبت به روش‌های سنتی آموزش ریاضی است.</p>
@@ -536,13 +603,15 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <a href="#" class="logo">
-                        <div class="sophia-logo">
-                            <div class="s-logo">S+</div>
-                            <div class="s-name">سوفیا</div>
+                    <a href="#" class="footer-logo">
+                        <div class="logo-wrapper">
+                            <span class="s-logo">S+</span>
+                            <span class="s-name">سوفیا</span>
                         </div>
                     </a>
+                    
                     <p>اکوسیستم آموزشی سوفیا+ با استفاده از فناوری‌های روز، یادگیری ریاضی را برای دانش‌آموزان آسان‌تر و جذاب‌تر می‌کند.</p>
+                    
                     <div class="social-links">
                         <a href="#" aria-label="تلگرام"><i class="fab fa-telegram"></i></a>
                         <a href="#" aria-label="اینستاگرام"><i class="fab fa-instagram"></i></a>
@@ -583,11 +652,11 @@
                         </li>
                         <li>
                             <i class="fas fa-phone"></i>
-                            <a href="tel:+989121234567">۰۹۱۲ ۱۲۳ ۴۵۶۷</a>
+                            <a href="tel:+989981389014">۰۹۱۲ ۱۲۳ ۴۵۶۷</a>
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            تهران، ایران
+                            بروجرد، لرستان                            
                         </li>
                     </ul>
                 </div>
@@ -595,18 +664,20 @@
             
             <div class="footer-bottom">
                 <p>تمامی حقوق برای اکوسیستم آموزشی سوفیا+ محفوظ است © ۱۴۰۴</p>
-                <p>طراحی شده برای جشنواره نوجوانان خوارزمی - محور ریاضی و فناوری اطلاعات</p>
+                <p>طراحی شده برای یازدهمین جشنواره نوجوانان خوارزمی - محور ریاضی و فناوری اطلاعات</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top -->
+    <!-- Back to Top Button -->
     <a href="#home" class="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </a>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
 </body>

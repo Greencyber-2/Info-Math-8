@@ -8,6 +8,9 @@
     --bg-color: #121212;
     --card-bg: #1e1e1e;
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --radius: 12px;
+    --header-height: 80px;
 }
 
 body {
@@ -15,7 +18,66 @@ body {
     color: var(--text-color);
 }
 
-/* اصلاح پس‌زمینه بخش‌ها */
+/* بهبود نمایش کادر موبایل در صفحه اصلی */
+.app-mockup {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    width: 300px;
+    height: 500px;
+}
+
+.math-animation {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.equation {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    opacity: 1;
+    transform: none;
+    transition: all 0.5s ease;
+}
+
+.solution {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    opacity: 1;
+    transform: none;
+    transition: all 0.5s ease;
+}
+
+/* بهبود نمایش دکمه‌های دانلود */
+.download-buttons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.download-buttons .btn {
+    width: 100%;
+    margin: 0;
+}
+
+/* بقیه استایل‌های دارک مود مانند قبل */
 .hero,
 .features,
 .demo,
@@ -28,7 +90,6 @@ body {
     background-color: #1a1a1a !important;
 }
 
-/* اصلاح پس‌زمینه الگوها */
 body::before {
     opacity: 0.03;
     background-image: url('../images/math-pattern-dark.svg') !important;
@@ -39,7 +100,6 @@ body::before {
     opacity: 0.03;
 }
 
-/* بقیه استایل‌های دارک مود */
 .header {
     background-color: rgba(30, 30, 30, 0.95) !important;
     backdrop-filter: blur(10px);
@@ -49,7 +109,7 @@ body::before {
     background-color: rgba(30, 30, 30, 0.98) !important;
 }
 
-.navbar a {
+.nav-link {
     color: var(--text-color) !important;
 }
 
@@ -69,10 +129,10 @@ body::before {
 .download-card,
 .products-tabs,
 .tab-content .tab-text,
-.app-window,
+.app-mockup,
 .chat-container,
-.messenger-container,
-.team-member,
+.messenger-mockup,
+.team-card,
 .about-text {
     background-color: var(--card-bg) !important;
     color: var(--text-color) !important;
@@ -81,19 +141,18 @@ body::before {
 .feature-description,
 .tab-text p,
 .download-description,
-.command,
-.bio,
+.member-bio,
 .about-text p {
     color: #bbb !important;
 }
 
-.app-content,
+.app-screen,
 .chat-messages,
-.messenger-content {
+.messenger-screen {
     background-color: #1e1e1e !important;
 }
 
-.bot-message {
+.bot-message .message-content {
     background-color: #333 !important;
     color: #f0f0f0 !important;
 }
@@ -192,4 +251,106 @@ body::before {
 
 .avatar-overlay {
     background-color: rgba(79, 70, 229, 0.7) !important;
+}
+
+.tabs-header {
+    background-color: #333 !important;
+    border-bottom-color: #444 !important;
+}
+
+.tab-btn {
+    color: #bbb !important;
+    background-color: transparent !important;
+    font-family: 'Vazirmatn', sans-serif !important;
+}
+
+.tab-btn.active {
+    background-color: var(--card-bg) !important;
+    color: var(--primary-color) !important;
+}
+
+.tab-btn::after {
+    background-color: var(--primary-color) !important;
+}
+
+.messenger-input {
+    background-color: #333 !important;
+    border-top-color: #444 !important;
+}
+
+.messenger-input input {
+    background-color: #2a2a2a !important;
+    border-color: #444 !important;
+    color: var(--text-color) !important;
+}
+
+.messenger-input button {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.message.user-message .message-content {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.message.bot-message .message-content {
+    background-color: #333 !important;
+    color: var(--text-color) !important;
+}
+
+.question {
+    color: var(--text-color) !important;
+}
+
+.options button {
+    background-color: #2a2a2a !important;
+    color: var(--text-color) !important;
+    border: 1px solid #444 !important;
+}
+
+.options button:hover {
+    background-color: #333 !important;
+}
+
+.btn.disabled {
+    background-color: #333 !important;
+    color: #999 !important;
+    border-color: #444 !important;
+    box-shadow: none !important;
+    font-family: 'Vazirmatn', sans-serif !important;
+}
+
+.btn.disabled:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.btn.disabled .fa-hourglass-half {
+    color: #999 !important;
+}
+
+/* بهبود نمایش در موبایل */
+@media (max-width: 768px) {
+    .app-mockup {
+        width: 280px;
+        height: 450px;
+    }
+    
+    .app-mockup.large, 
+    .browser-mockup {
+        height: 300px;
+    }
+    
+    .messenger-mockup {
+        height: 450px;
+    }
+    
+    .download-buttons {
+        flex-direction: column;
+    }
+    
+    .download-buttons .btn {
+        width: 100%;
+    }
 }
