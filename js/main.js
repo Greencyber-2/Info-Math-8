@@ -67,6 +67,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+
+    // Initialize audio player
+    const audioPlayer = document.querySelector('audio');
+    if (audioPlayer) {
+        audioPlayer.volume = 0.8;
+    }
+    
+    // Initialize updates grid animation
+    const updateCards = document.querySelectorAll('.update-card');
+    
+    const updateObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('animate');
+                }, index * 150);
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    updateCards.forEach(card => {
+        updateObserver.observe(card);
+    });
+
     // Dark/Light Mode Toggle
     const themeToggle = document.getElementById('themeToggle');
     const darkModeStyle = document.getElementById('darkModeStyle');

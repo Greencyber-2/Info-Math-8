@@ -1864,3 +1864,223 @@ h1, h2, h3, h4, h5, h6 {
     cursor: not-allowed;
     user-select: none;
 }
+/* بخش جدید برای بروزرسانی‌ها */
+.updates {
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.updates::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/math-bg-light.svg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.03;
+    z-index: 0;
+}
+
+.updates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.update-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.update-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.update-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.update-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.update-card:hover .update-image img {
+    transform: scale(1.05);
+}
+
+.update-date {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    z-index: 1;
+}
+
+.update-date .day {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.update-date .month {
+    font-size: 0.9rem;
+}
+
+.update-content {
+    padding: 20px;
+}
+
+.update-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.update-description {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.update-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: var(--transition);
+}
+
+.update-link:hover {
+    color: var(--accent-color);
+    transform: translateX(-5px);
+}
+
+.updates-cta {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* بخش جدید برای بیوگرافی برنامه‌نویس */
+.developer-bio {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+    margin-top: 60px;
+}
+
+.bio-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.bio-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.bio-image {
+    flex: 1;
+    max-width: 300px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.bio-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bio-text {
+    flex: 2;
+}
+
+.bio-text p {
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.audio-player {
+    margin-top: 30px;
+    background-color: rgba(108, 99, 255, 0.1);
+    padding: 20px;
+    border-radius: var(--radius);
+}
+
+.audio-player h4 {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+audio {
+    width: 100%;
+}
+
+/* تغییرات بخش دانلود */
+.download-card {
+    text-align: center;
+}
+
+.download-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.download-buttons .btn {
+    width: 100%;
+    margin: 0;
+}
+
+/* استایل‌های رسپانسیو */
+@media (max-width: 992px) {
+    .bio-content {
+        flex-direction: column;
+    }
+    
+    .bio-image {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .updates-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .download-buttons {
+        flex-direction: column;
+    }
+}

@@ -354,3 +354,43 @@ body::before {
         width: 100%;
     }
 }
+/* استایل‌های دارک مود برای بخش‌های جدید */
+.updates {
+    background-color: var(--bg-color) !important;
+}
+
+.update-card {
+    background-color: var(--card-bg) !important;
+}
+
+.update-title {
+    color: var(--text-color) !important;
+}
+
+.update-description {
+    color: #bbb !important;
+}
+
+.update-link {
+    color: var(--primary-color) !important;
+}
+
+.update-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+.developer-bio {
+    background-color: var(--card-bg) !important;
+}
+
+.bio-text p {
+    color: #bbb !important;
+}
+
+.audio-player {
+    background-color: rgba(108, 99, 255, 0.2) !important;
+}
+
+.audio-player h4 {
+    color: var(--text-color) !important;
+}
